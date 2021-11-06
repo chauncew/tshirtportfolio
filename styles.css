@@ -1,0 +1,490 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Navigation Styles */
+.navigation {
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+    width: 100%;
+    background: rgb(29, 29, 29);
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    z-index: 1;
+}
+
+.navItems ul {
+    display: flex;
+    list-style: none;
+    margin-left: 10%;
+}
+
+.navItems ul li {
+    cursor: pointer;
+    letter-spacing: 1.5px;
+    margin: 0 20px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.rightSide .cart {
+    position: relative;
+    color: #fff;
+    margin-right: 5px;
+  }
+
+.icons {
+    font-size: 20px;
+    margin-right: 60px;
+}
+
+.icons i {
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.vail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    /* z-index: 1; */
+    opacity: 0;
+}
+
+
+/* Landing Page Styles */
+.landingPage {
+    height: 85vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.landingImage {
+    width: clamp(250px, 55vw, 500px);
+    margin-left: 30%;
+    object-fit: contain;
+    position: relative;
+    z-index: -1;
+}
+
+.mainHeading {
+    padding-top: 20px;
+    position: absolute;
+    top: 20%;
+    left: 2%;
+    letter-spacing: 1.5px;
+    font-size: clamp(1.1rem, 2.5vw, 3rem);
+    font-family: 'Jim Nightshade', cursive;
+
+}
+
+.mainHeading2 {
+    width: 20%;
+    padding-top: 20px;
+    position: absolute;
+    top: 40%;
+    right: 12%;
+    letter-spacing: 1.5px;
+    font-size: clamp(1.1rem, 2vw, 3rem);
+    font-family: 'Jim Nightshade', cursive;
+  }
+  
+/* Info Section Styles */
+#infoSection {
+    height: 50vh;
+    background: rgb(37, 37, 37);
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    color: whitesmoke;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.infoPara {
+    font-size: clamp(1.1rem, 2vw, 2rem);
+    margin-bottom: 10px;
+  }
+
+.infoIcons {
+    font-size: clamp(1.1rem, 4vw, 5rem);
+}
+
+/* Number of items in the cart, right now set to 0*/
+
+.shoppingAmt {
+    position: absolute;
+    top: 24px;
+    right: 45px;
+
+}
+
+.para1 {
+    margin-bottom: 5px;
+}
+
+/* Men And Women Styles */
+.mensAndWomens {
+    background: #000;
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+.images {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    position: relative;
+    overflow: hidden;
+}
+
+.images .menImg {
+    object-fit: center;
+}
+
+.mensAndWomens img {
+    height: 625px;
+    width: 500px;
+    overflow: hidden;
+}
+
+.menImg, .womenImg {
+    position: relative;
+}
+
+.womensImage {
+    object-fit: cover;
+  }
+  
+
+.men {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    font-size: 25px;
+    font-family: 'Jim Nightshade', cursive;
+}
+
+.women {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    font-size: 25px;
+    font-family: 'Jim Nightshade', cursive;
+}
+
+/* Prints Section Styles */
+#shirtPrints {
+    padding: 100px 0;
+    background: url('./images/printsBackgrd.jpg')center/cover;
+    overflow: hidden;
+  }
+
+.printsHeading {
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: 'Jim Nightshade', cursive;
+    font-size: clamp(1.3rem, 3vw, 3rem);
+  }
+
+  .imageDiv {
+    height: 225px;
+    width: 225px;
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 5px;
+  }
+  
+  .pImage {
+      height: 100%;
+      width: 100%;
+      margin-top: 20px;
+      border-radius: 5px ;
+  }
+
+  .topPrints {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr) );
+    margin-bottom: 50px;
+  }
+  
+  .bottomPrints {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr) );
+  }
+  
+  .prints {
+    text-align: center;
+    /* margin: 0 auto; */
+  
+  }
+  
+  .prints img:hover {
+    transform: scale(1.6) rotate(20deg);
+    transition: 1s ease;
+  }
+  
+  .imageHeading {
+    margin-top: 5px;
+  }
+  
+
+  
+  .printInfo {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 5px 0;
+    overflow: hidden;
+  }
+
+  .thumbsUp {
+    margin-right: 5px;
+    height: 20px;
+    width: 20px;
+  }
+
+  .printBtn {
+    background: rgb(26, 26, 26);
+    color: #fff;
+    font-size: clamp(0.8rem, 1.5vw, 3rem);
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    outline: none;
+    border: none;
+  }
+  
+  .prints a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: #fff;
+  }
+
+
+/* Exclusive Section Styles */
+#salesSection {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr) );
+    overflow: hidden;
+    position: relative;
+}
+
+#heading2 {
+    height: 100%;
+    position: absolute;
+    top: 5%;
+    left: 2%;
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    color: #fff;
+    letter-spacing: 1.5px;
+    font-family: 'Jim Nightshade', cursive;
+}
+
+.shirtImages {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    position: absolute;
+    top: 20%;
+    left: 0;
+}
+
+.images2 img {
+    height: 300px;
+    width: 300px;
+    margin: 0 6px;
+    cursor: pointer;
+    border-radius: 10px;
+    position: relative;
+}
+
+.shirts {
+    position: relative;
+    overflow: hidden;
+}
+
+.shirts:hover .price{
+    transform: translateX(0);
+}
+
+.price {
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    background: url(images/priceBackGrd.jpg)center/cover;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    text-align: center;
+    color: #fff;
+    height: 80px;
+    width: 292px;
+    transform: translateX(-302px);
+    transition: 0.4s ease-in;
+    cursor: pointer;
+}
+
+ .shirts p {
+    padding-top: 5px;
+    line-height: 25px;
+    font-size: 25px;
+}
+
+.shirtCart {
+    font-size: 0.8rem;
+    color: #fff;
+    position: absolute;
+    bottom: 1.5%;
+    left: 50%;
+    transform: translate(-50%, 1.5%);
+  }
+
+.imagesActive {
+    transform: translateX(0);
+    transition: 0.5s ease-in;
+}
+
+.copyHeading {
+    margin-left: 60px;
+    letter-spacing: 1.5px;
+}
+
+#footer {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(29, 29, 29);
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+/* Cart Page Styles */
+.navigation2 {
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+    width: 100%;
+    background: rgb(29, 29, 29);
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    z-index: 1;
+}
+
+.cartContainer {
+    height: 100vh;
+    min-width: 650px;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+.cartContainer header {
+    
+}
+
+.home  {
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: clamp(0.8rem, 1.5rem, 2rem);
+    color: #fff;
+}
+
+.footer2 {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(29, 29, 29);
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+
+@media(max-width: 1250px) {
+    .salesSection {
+        height: 150vh;
+    }
+}
+
+@media(max-width: 850px) {
+    .navItems {
+      display: none;
+    }
+    .hamburger {
+      display: block;
+    }
+}
+  
+  @media(max-width: 625px) {
+    .salesSection {
+      height: 250vh;
+    }
+
+    .salesSection img {
+        margin-top: 10px;
+    }
+  }
+  
+  @media(max-width: 500px) {
+    .mainHeading {
+      top: 3%;
+      width: 50%;
+    }
+    .mainHeading2 {
+      top: 10%;
+      right: 0;
+    }
+    .womenImg img {
+      object-position: left;
+    }
+    .men, .women {
+        left: 15%
+    }
+  }
+  
+  @media(max-width: 420px) {
+    .mainHeading2 {
+      display: none;
+    }
+  }
+
+  @media(max-width: 350px) {
+      .men, .women {
+          display: none;
+      }
+  }
