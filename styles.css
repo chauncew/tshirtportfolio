@@ -206,6 +206,7 @@ ul li a {
     margin-bottom: 50px;
     font-family: 'Jim Nightshade', cursive;
     font-size: clamp(1.3rem, 3vw, 3rem);
+    color: #fff;
   }
 
   .imageDiv {
@@ -247,15 +248,15 @@ ul li a {
   
   .imageHeading {
     margin-top: 5px;
+    color: #fff;
   }
-  
-
-  
+ 
   .printInfo {
     display: flex;
     justify-content: space-evenly;
     margin: 5px 0;
     overflow: hidden;
+    color: #fff;
   }
 
   .thumbsUp {
@@ -290,6 +291,7 @@ ul li a {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr) );
     overflow: hidden;
     position: relative;
+    background: url('./images/salesBkg.jpg')center/cover;
 }
 
 #heading2 {
