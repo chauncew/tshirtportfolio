@@ -10,6 +10,10 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+  position: relative;
+}
+
 /* Navigation Styles */
 .navigation {
     position: sticky;
@@ -59,16 +63,15 @@ ul li a {
     cursor: pointer;
 }
 
-.vail {
+/* .vail {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
     background: rgba(0,0,0,0.6);
-    /* z-index: 1; */
     opacity: 0;
-}
+} */
 
 
 /* Landing Page Styles */
@@ -237,8 +240,7 @@ ul li a {
   
   .prints {
     text-align: center;
-    /* margin: 0 auto; */
-  
+    cursor: pointer;
   }
   
   .prints img:hover {
@@ -338,7 +340,6 @@ ul li a {
     bottom: 20px;
     left: 10px;
     background: url(images/priceBackGrd.jpg)center/cover;
-    font-size: 18px;
     letter-spacing: 1.5px;
     text-align: center;
     color: #fff;
@@ -402,16 +403,36 @@ ul li a {
     z-index: 1;
 }
 
-.cartContainer {
+/* .cartContainer {
     height: 100vh;
     min-width: 650px;
     display: flex;
     justify-content: space-around;
     margin: 0 auto;
+    position: relative;
 }
 
-.cartContainer header {
-    
+.cartHeader {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+*/
+
+.products {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    position: absolute;
+    top: 20%;
+    left: 0;
+}
+
+.copyHeading {
+  margin-left: 60px;
+  letter-spacing: 1.5px;
 }
 
 .home  {
@@ -422,7 +443,7 @@ ul li a {
 }
 
 .footer2 {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     left: 0;
     height: 100px;
