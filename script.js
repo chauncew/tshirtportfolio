@@ -61,11 +61,11 @@ let products = [
     },
     {
         id: 6,
-        name: 'Scream',
+        name: 'Blue Blaze',
         price: 53.99,
         inCart: 0,
         inStock: 10,
-        image: src="images/ScreemSkull.jpg"
+        image: src="images/blueBlazejpg.jpg"
     },
     {
         id: 7,
