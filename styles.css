@@ -301,7 +301,7 @@ ul li a {
 
 .closeCart {
   position: absolute;
-  top: 5%;
+  top: 1%;
   left: 5%;
   color: #fff;
   font-size: 2rem;
@@ -328,7 +328,7 @@ ul li a {
 }
 
 .cartHeading {
-  padding: 50px 0;
+  padding: 10px 0;
   text-align: center;
   color: #fff;
   margin-bottom: 20px;
@@ -490,8 +490,17 @@ ul li a {
   }
 
   @media(max-width: 450px) {
-    .cartWrapper {
-      height: 120vh;
+    .cartHeading {
+      display: none;
+    }
+    .cartItems {
+      margin-top: 60px;
+    }
+    .total {
+      bottom: 1%;
+    }
+    .checkoutBtn {
+      bottom: 1%;
     }
   }
   
@@ -506,10 +515,4 @@ ul li a {
       .men, .women {
           display: none;
       }
-  }
-
-  @media(max-width: 335px) {
-    .cartWrapper {
-      height: 100vh;
-    }
   }
