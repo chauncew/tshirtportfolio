@@ -80,14 +80,17 @@ ul li a {
     width: 100%;
     position: relative;
     overflow: hidden;
+    /* background: url('./images/landingBkg.jpg')center/cover; */
+
 }
 
 .landingImage {
-    width: clamp(250px, 55vw, 500px);
-    margin-left: 30%;
+    height: 100%;
     object-fit: contain;
-    position: relative;
-    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 20%;
+    /* z-index: -1; */
 }
 
 .mainHeading {
@@ -140,6 +143,7 @@ ul li a {
     position: absolute;
     top: 24px;
     right: 35px;
+    color: #fff;
 }
 
 .para1 {
@@ -287,60 +291,40 @@ ul li a {
 
 /* Exclusive Section Styles */
 #salesSection {
-    height: 175vh;
-    /* display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
     position: relative;
     background: url('./images/salesBkg.jpg')center/cover;
 }
 
-.productsContainer {
-  display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
 #heading2 {
     position: absolute;
-    top: 5%;
+    top: 2%;
     left: 2%;
+    height: 75px;
     font-size: clamp(1.5rem, 3vw, 3rem);
     color: #fff;
     letter-spacing: 1.5px;
     font-family: 'Jim Nightshade', cursive;
 }
 
-.shirts {
+.shirts {           
   position: relative;
   overflow: hidden;
-   margin: 20px 0;
+   margin-bottom: 20px;
+   margin-top: 20px;
+   margin: 0 auto;
 }
 
 .products {
-  /* display: flex;
-  justify-content: space-evenly; */
-  /* display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
-  flex-wrap: wrap;
-  width: 100%;
-  position: absolute;
-  top: 20%;
-  left: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  column-gap: 20px;
+  row-gap: 10px;
+  padding: 120px 0;
 }
 
-.shirtImages {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    width: 100%;
-    position: absolute;
-    top: 20%;
-    left: 0;
-}
-
-.images2 img {
+.shirts img {
     height: 300px;
     width: 300px;
-    margin: 0 6px;
     border-radius: 10px;
     position: relative;
 }
@@ -352,7 +336,7 @@ ul li a {
 .price {
     position: absolute;
     bottom: 20px;
-    left: 10px;
+    left: 3.5px;
     background: url(images/priceBackGrd.jpg)center/cover;
     letter-spacing: 1.5px;
     text-align: center;
@@ -499,13 +483,25 @@ ul li a {
 
 .total {
   display: flex;
+  width: 100%;
   color: #fff;
-  justify-content: center;
   position: absolute;
   bottom: 5%;
   left: 10%;
+}
 
-  /* transform: translate(0, -50%); */
+.checkoutBtn {
+  position: absolute;
+  bottom: 5%;
+  right: 25%;
+  color: #fff;
+  background: #000;
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 .subtotal {
@@ -535,22 +531,20 @@ ul li a {
     letter-spacing: 1px;
 }
 
-
-@media(max-width: 1250px) {
-    #salesSection {
-        height: 200vh;
-    }
-}
-
 @media(max-width: 1125px) {
+
   .mainHeading2 {
     left: 5%;
   }
+
+  .products {
+    column-gap: 40px;
+  }
 }
 
-@media(max-width: 935px) {
-  #salesSection {
-    height: 300vh;
+@media(max-width: 900px) {
+  .products {
+    column-gap: 40px;
   }
 }
 
@@ -564,9 +558,6 @@ ul li a {
 }
   
   @media(max-width: 625px) {
-    #salesSection {
-      height: 550vh;
-    }
     #heading2 {
       padding: 0;
       margin: 0;
@@ -576,8 +567,17 @@ ul li a {
         margin-top: 10px;
     }
   }
+
+  @media(max-width: 600px) {
+    .landingImage {
+      left: 10%;
+    }
+  }
   
   @media(max-width: 500px) {
+    .landingImage {
+      left: 0%;
+    }
     .mainHeading {
       top: 3%;
       width: 50%;
@@ -601,7 +601,14 @@ ul li a {
   }
 
   @media(max-width: 350px) {
+  
       .men, .women {
           display: none;
       }
+  }
+
+  @media(max-width: 335px) {
+    .cartWrapper {
+      height: 100vh;
+    }
   }

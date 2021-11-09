@@ -89,7 +89,6 @@ closeCart.addEventListener('click', () => {
 const renderProducts = () => {
     products.forEach((product) => {
         productsEl.innerHTML += `
-        <div class="productsContainer">
             <div class="shirts">
                 <img src=${product.image} alt="">
                 <div class="price" onclick="addToCart(${product.id})">
@@ -98,13 +97,11 @@ const renderProducts = () => {
                     <h4 class="addToCart">Add To Cart</h4>
                 </div>
             </div>
-        </div>
         `
     })
 }
 
 renderProducts()
-
 
 
 //Add to cart array
