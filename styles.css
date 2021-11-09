@@ -63,25 +63,12 @@ ul li a {
     cursor: pointer;
 }
 
-/* .vail {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: rgba(0,0,0,0.6);
-    opacity: 0;
-} */
-
-
 /* Landing Page Styles */
 .landingPage {
     height: 85vh;
     width: 100%;
     position: relative;
     overflow: hidden;
-    /* background: url('./images/landingBkg.jpg')center/cover; */
-
 }
 
 .landingImage {
@@ -90,7 +77,6 @@ ul li a {
     position: absolute;
     top: 0;
     left: 20%;
-    /* z-index: -1; */
 }
 
 .mainHeading {
@@ -136,8 +122,6 @@ ul li a {
 .infoIcons {
     font-size: clamp(1.1rem, 4vw, 5rem);
 }
-
-/* Number of items in the cart, right now set to 0*/
 
 .shoppingAmt {
     position: absolute;
@@ -199,95 +183,6 @@ ul li a {
     font-size: 25px;
     font-family: 'Jim Nightshade', cursive;
 }
-
-/* Prints Section Styles */
-#shirtPrints {
-    padding: 100px 0;
-    background: url('./images/printsBackgrd.jpg')center/cover;
-    overflow: hidden;
-  }
-
-.printsHeading {
-    text-align: center;
-    margin-bottom: 50px;
-    font-family: 'Jim Nightshade', cursive;
-    font-size: clamp(1.3rem, 3vw, 3rem);
-    color: #fff;
-  }
-
-  .imageDiv {
-    height: 225px;
-    width: 225px;
-    overflow: hidden;
-    margin: 0 auto;
-    border-radius: 5px;
-  }
-  
-  .pImage {
-      height: 100%;
-      width: 100%;
-      margin-top: 20px;
-      border-radius: 5px ;
-  }
-
-  .topPrints {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr) );
-    margin-bottom: 50px;
-  }
-  
-  .bottomPrints {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr) );
-  }
-  
-  .prints {
-    text-align: center;
-    cursor: pointer;
-  }
-  
-  .prints img:hover {
-    transform: scale(1.6) rotate(20deg);
-    transition: 1s ease;
-  }
-  
-  .imageHeading {
-    margin-top: 5px;
-    color: #fff;
-  }
- 
-  .printInfo {
-    display: flex;
-    justify-content: space-evenly;
-    margin: 5px 0;
-    overflow: hidden;
-    color: #fff;
-  }
-
-  .thumbsUp {
-    margin-right: 5px;
-    height: 20px;
-    width: 20px;
-  }
-
-  .printBtn {
-    background: rgb(26, 26, 26);
-    color: #fff;
-    font-size: clamp(0.8rem, 1.5vw, 3rem);
-    padding: 5px 10px;
-    border-radius: 10px;
-    margin: 0 auto;
-    margin-bottom: 40px;
-    outline: none;
-    border: none;
-  }
-  
-  .prints a {
-    text-decoration: none;
-    font-size: 0.9rem;
-    color: #fff;
-  }
-
 
 /* Exclusive Section Styles */
 #salesSection {
@@ -393,7 +288,7 @@ ul li a {
 /* Cart Page Styles */
 .cartWrapper {
   background: url('./images/printsBackgrd.jpg')center/cover;
-  height: 80vh;
+  height: 100vh;
   width: 100%;
   position: fixed;
   top: 0%;
@@ -591,6 +486,12 @@ ul li a {
     }
     .men, .women {
         left: 15%
+    }
+  }
+
+  @media(max-width: 450px) {
+    .cartWrapper {
+      height: 120vh;
     }
   }
   
