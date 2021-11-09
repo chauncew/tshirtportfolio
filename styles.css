@@ -24,7 +24,7 @@ body {
     align-items: center;
     height: 75px;
     width: 100%;
-    background: rgb(29, 29, 29);
+    background: url('./images/footerBkg.jpg')center;
     color: #fff;
     border-bottom: 2px solid #fff;
     z-index: 1;
@@ -115,7 +115,7 @@ ul li a {
 /* Info Section Styles */
 #infoSection {
     height: 50vh;
-    background: rgb(37, 37, 37);
+    background: url('./images/footerBkg.jpg')center;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -139,8 +139,7 @@ ul li a {
 .shoppingAmt {
     position: absolute;
     top: 24px;
-    right: 45px;
-
+    right: 35px;
 }
 
 .para1 {
@@ -288,16 +287,19 @@ ul li a {
 
 /* Exclusive Section Styles */
 #salesSection {
-    height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr) );
-    overflow: hidden;
+    height: 175vh;
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
     position: relative;
     background: url('./images/salesBkg.jpg')center/cover;
 }
 
+.productsContainer {
+  display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
 #heading2 {
-    height: 100%;
     position: absolute;
     top: 5%;
     left: 2%;
@@ -305,6 +307,24 @@ ul li a {
     color: #fff;
     letter-spacing: 1.5px;
     font-family: 'Jim Nightshade', cursive;
+}
+
+.shirts {
+  position: relative;
+  overflow: hidden;
+   margin: 20px 0;
+}
+
+.products {
+  /* display: flex;
+  justify-content: space-evenly; */
+  /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+  flex-wrap: wrap;
+  width: 100%;
+  position: absolute;
+  top: 20%;
+  left: 0;
 }
 
 .shirtImages {
@@ -321,14 +341,8 @@ ul li a {
     height: 300px;
     width: 300px;
     margin: 0 6px;
-    cursor: pointer;
     border-radius: 10px;
     position: relative;
-}
-
-.shirts {
-    position: relative;
-    overflow: hidden;
 }
 
 .shirts:hover .price{
@@ -348,6 +362,11 @@ ul li a {
     transform: translateX(-302px);
     transition: 0.4s ease-in;
     cursor: pointer;
+}
+
+.addToCart {
+  font-size: 0.8rem;
+  margin-top: 5px;
 }
 
  .shirts p {
@@ -381,58 +400,38 @@ ul li a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgb(29, 29, 29);
+    background: url('./images/footerBkg.jpg')center;
     color: #fff;
     font-size: 16px;
     letter-spacing: 1px;
 }
 
 /* Cart Page Styles */
-.navigation2 {
-    position: sticky;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 75px;
-    width: 100%;
-    background: rgb(29, 29, 29);
-    color: #fff;
-    border-bottom: 2px solid #fff;
-    z-index: 1;
+.cartWrapper {
+  background: url('./images/printsBackgrd.jpg')center/cover;
+  height: 80vh;
+  width: 100%;
+  position: fixed;
+  top: 0%;
+  right: 0;
+  transform: translateX(100%);
+  transition: 1s;
+  overflow: hidden;
+  z-index: 500;
 }
 
-/* .cartContainer {
-    height: 100vh;
-    min-width: 650px;
-    display: flex;
-    justify-content: space-around;
-    margin: 0 auto;
-    position: relative;
+.closeCart {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
-.cartHeader {
-    height: 200px;
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-}
-*/
+.cartWrapperActive {
+  transform: translateX(0);
 
-.products {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    width: 100%;
-    position: absolute;
-    top: 20%;
-    left: 0;
-}
-
-.copyHeading {
-  margin-left: 60px;
-  letter-spacing: 1.5px;
 }
 
 .home  {
@@ -442,8 +441,88 @@ ul li a {
     color: #fff;
 }
 
-.footer2 {
-    position: absolute;
+.cartItems {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  color: #fff;
+}
+
+.cartHeading {
+  padding: 50px 0;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  letter-spacing: 1.5px;
+}
+
+.cartItems img {
+    height: 100px;
+    width: 100px;
+    margin: 10px 6px;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.itemInfo {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.itemUnits {
+  display: flex;
+}
+
+.units {
+  margin: 0 auto;
+  margin-top: 5px;
+}
+
+.minus, .add {
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 0 5px;
+  border-radius: 50%;
+}
+
+.minus {
+  margin-left: 25px;
+}
+
+.add {
+  margin-right: 25px;
+}
+
+.total {
+  display: flex;
+  color: #fff;
+  justify-content: center;
+  position: absolute;
+  bottom: 5%;
+  left: 10%;
+
+  /* transform: translate(0, -50%); */
+}
+
+.subtotal {
+  margin-right: 5px;
+  position: relative;
+}
+
+.amountSpan {
+  margin-right: 5px;
+}
+
+.amount {
+  margin-right: 5px;
+}
+
+.footer {
+    position: fixed;
     bottom: 0;
     left: 0;
     height: 100px;
@@ -451,7 +530,6 @@ ul li a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgb(29, 29, 29);
     color: #fff;
     font-size: 16px;
     letter-spacing: 1px;
@@ -459,9 +537,21 @@ ul li a {
 
 
 @media(max-width: 1250px) {
-    .salesSection {
-        height: 150vh;
+    #salesSection {
+        height: 200vh;
     }
+}
+
+@media(max-width: 1125px) {
+  .mainHeading2 {
+    left: 5%;
+  }
+}
+
+@media(max-width: 935px) {
+  #salesSection {
+    height: 300vh;
+  }
 }
 
 @media(max-width: 850px) {
@@ -474,8 +564,12 @@ ul li a {
 }
   
   @media(max-width: 625px) {
-    .salesSection {
-      height: 250vh;
+    #salesSection {
+      height: 550vh;
+    }
+    #heading2 {
+      padding: 0;
+      margin: 0;
     }
 
     .salesSection img {
