@@ -65,7 +65,7 @@ ul li a {
 
 /* Landing Page Styles */
 .landingPage {
-  height: 85vh;
+  height: 90vh;
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -86,7 +86,7 @@ ul li a {
   left: 2%;
   letter-spacing: 1.5px;
   font-size: clamp(1.5rem, 2.5vw, 3rem);
-  font-family: 'Jim Nightshade', cursive;
+  font-family: 'Jim Nightshade', sans-serif;
 }
 
 .mainHeading2 {
@@ -96,14 +96,20 @@ ul li a {
   top: 40%;
   right: 12%;
   letter-spacing: 1.5px;
+  text-align: center;
   font-size: clamp(1.1rem, 2vw, 3rem);
-  font-family: 'Jim Nightshade', cursive;
+  font-family: 'Jim Nightshade', sans-serif;
 }
 
 /* Info Section Styles */
 #infoSection {
   height: 50vh;
   background: url('./images/footerBkg.jpg') center;
+}
+
+.infoWrapper {
+  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -111,6 +117,7 @@ ul li a {
   color: whitesmoke;
   text-align: center;
   letter-spacing: 0.5px;
+  padding: 10px 0;
 }
 
 .infoPara {
@@ -120,6 +127,7 @@ ul li a {
 
 .infoIcons {
   font-size: clamp(1.1rem, 4vw, 5rem);
+  margin-bottom: 10px;
 }
 
 .shoppingAmt {
@@ -129,15 +137,12 @@ ul li a {
   color: #fff;
 }
 
-.para1 {
-  margin-bottom: 5px;
-}
-
 /* About section styles */
 .aboutSection {
-  height: 110vh;
+  height: 100vh;
   width: 100%;
   background: url('./images/salesBkg.jpg') center/cover;
+  font-family: 'Jim Nightshade', sans-serif;
 }
 
 .scene,
@@ -147,9 +152,24 @@ canvas {
 
 .aboutInfo {
   position: absolute;
-  top: 20%;
+  top: 25%;
   right: 5%;
+  width: 55%;
   color: #fff;
+  line-height: 1.5;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid rgb(160, 119, 66);
+}
+
+.aboutInfo h1 {
+  font-size: clamp(1.2rem, 3vw, 5rem);
+}
+
+.aboutInfo p {
+  font-size: clamp(1.1rem, 2vw, 3rem);
+  margin-top: 10px;
 }
 
 /* Men And Women Styles */
@@ -292,7 +312,7 @@ canvas {
 }
 
 #footer {
-  height: 100px;
+  height: 200px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -301,6 +321,10 @@ canvas {
   color: #fff;
   font-size: 16px;
   letter-spacing: 1px;
+}
+
+.midFooter {
+  line-height: 1.5;
 }
 
 /* Cart Page Styles */
