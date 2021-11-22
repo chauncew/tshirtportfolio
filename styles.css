@@ -45,6 +45,40 @@ body {
 ul li a {
   text-decoration: none;
   color: #fff;
+  position: relative;
+}
+
+/* Nav animations */
+ul li a:before {
+  content: '';
+  width: 0px;
+  height: 5px;
+  background: rgb(150, 0, 0);
+  position: absolute;
+  top: 120%;
+  left: 0;
+  transition: 0.5s;
+}
+
+ul li a:after {
+  content: '';
+  width: 0px;
+  height: 5px;
+  background: rgb(204, 185, 80);
+  position: absolute;
+  top: 120%;
+  right: 0;
+  transition: 0.5s;
+}
+
+ul li a:hover:before {
+  width: 50%;
+  transform: translateX(100%);
+}
+
+ul li a:hover:after {
+  width: 50%;
+  transform: translateX(-100%);
 }
 
 .rightSide .cart {
@@ -505,6 +539,15 @@ canvas {
   }
   .hamburger {
     display: block;
+  }
+}
+
+@media (max-width: 800px) {
+  video {
+    display: none;
+  }
+  .aboutSection {
+    height: 50vh;
   }
 }
 
