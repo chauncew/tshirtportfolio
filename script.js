@@ -77,13 +77,6 @@ let products = [
 ]
 
 // Landing page animations
-// gsap.from('.mainHeading2', {
-//   autoAlpha: 0,
-//   y: -100,
-//   ease: 'bounce.out',
-//   duration: 1,
-//   stagger: 0.8,
-// })
 
 //This function will show the cart
 shoppingCart.addEventListener('click', () => {
@@ -246,6 +239,8 @@ const animate = () => {
 init()
 
 //Exclusive section animations
+gsap.plugin.register()
+
 const landingScramble = gsap.to('#heading2', {
   scrambleText: {
     autoAlpha: 1,
