@@ -257,10 +257,9 @@ const landingScramble = gsap.to('#heading2', {
   delay: 0.2,
 })
 
-ScrollTrigger.create({
-  animation: landingScramble,
-  trigger: '#exTop',
-  start: 'top top',
-  end: 'bottom bottom',
-  // markers: true,
-})
+// ScrollTrigger.create({
+//   animation: landingScramble,
+//   trigger: '#exTop',
+//   start: 'top top',
+//   end: 'bottom bottom',
+// })
