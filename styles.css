@@ -617,6 +617,9 @@ canvas {
 }
 
 @media (max-width: 450px) {
+  .aboutSection {
+    height: 70vh;
+  }
   .cartHeading {
     display: none;
   }
@@ -629,12 +632,6 @@ canvas {
   .checkoutBtn {
     bottom: 1%;
   }
-}
-
-@media (max-width: 420px) {
-  /* .mainHeading2 {
-    display: none;
-  } */
 }
 
 @media (max-width: 350px) {
