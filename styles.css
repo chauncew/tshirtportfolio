@@ -179,6 +179,11 @@ ul li a:hover:after {
   font-family: 'Jim Nightshade', sans-serif;
 }
 
+video {
+  height: 100%;
+  width: 100%;
+}
+
 .scene,
 canvas {
   position: relative;
@@ -638,5 +643,11 @@ canvas {
   .men,
   .women {
     display: none;
+  }
+}
+
+@media (max-width: 300px) {
+  .aboutSection {
+    height: 100vh;
   }
 }

@@ -242,25 +242,42 @@ const changeUnits = (action, id) => {
 gsap.registerPlugin()
 gsap.registerPlugin(ScrollTrigger)
 
-const landingScramble = gsap.to('#heading2', {
-  scrambleText: {
-    text: 'Dark Side Exclusives',
-    teenLength: true,
-    speed: 8,
-    revealDelay: 0,
-    chars: 'upperCase',
-    newClass: 'splitBackground',
-  },
-  duration: 1.8,
-  ease: 'none',
+// const landingScramble = gsap.to('#heading2', {
+//   scrambleText: {
+//     text: 'Dark Side Exclusives',
+//     teenLength: true,
+//     speed: 8,
+//     revealDelay: 0,
+//     chars: 'upperCase',
+//     newClass: 'splitBackground',
+//   },
+//   duration: 1.8,
+//   ease: 'none',
+// })
+
+const aboutSplit = new SplitText('#heading2', {
+  type: 'chars',
+})
+const aboutAnim = gsap.from(aboutSplit.chars, {
+  opacity: 0,
+  rotation: 180,
+  y: 500,
+  stagger: 0.08,
 })
 
 ScrollTrigger.create({
-  animation: landingScramble,
+  animation: aboutAnim,
   trigger: '#exTop',
-  start: 'top top',
+  start: '-60%',
   end: 'bottom bottom',
 })
+
+// ScrollTrigger.create({
+//   animation: landingScramble,
+//   trigger: '#exTop',
+//   start: 'top top',
+//   end: 'bottom bottom',
+// })
 
 //Men and women animations
 const menAndWomen = gsap.timeline()
