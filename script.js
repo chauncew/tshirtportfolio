@@ -261,3 +261,16 @@ ScrollTrigger.create({
   start: 'top top',
   end: 'bottom bottom',
 })
+
+//Men and women animations
+const menAndWomen = gsap.timeline()
+menAndWomen.from('.menImg', { x: -1000, y: -1000, duration: 1 })
+menAndWomen.from('.womenImg', { x: 1000, y: 1000, duration: 1 })
+
+ScrollTrigger.create({
+  animation: menAndWomen,
+  trigger: '#menAndWomen',
+  start: 'top top',
+  end: 'bottom bottom',
+  markers: 'true',
+})
