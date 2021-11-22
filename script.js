@@ -191,52 +191,52 @@ const changeUnits = (action, id) => {
 }
 
 //About section animations
-let container
-let camera
-let renderer
-let scene
-let skull
+// let container
+// let camera
+// let renderer
+// let scene
+// let skull
 
-const init = () => {
-  container = document.querySelector('.scene')
-  scene = new THREE.Scene()
-  const fov = 10
-  const aspect = container.clientWidth / container.clientHeight
-  const near = 5
-  const far = 1000
+// const init = () => {
+//   container = document.querySelector('.scene')
+//   scene = new THREE.Scene()
+//   const fov = 10
+//   const aspect = container.clientWidth / container.clientHeight
+//   const near = 5
+//   const far = 1000
 
-  camera = new THREE.PerspectiveCamera(fov, aspect, near, far)
-  camera.position.set(5, -0.5, 35)
+//   camera = new THREE.PerspectiveCamera(fov, aspect, near, far)
+//   camera.position.set(5, -0.5, 35)
 
-  const ambient = new THREE.AmbientLight(0x404040, 1)
-  scene.add(ambient)
+//   const ambient = new THREE.AmbientLight(0x404040, 1)
+//   scene.add(ambient)
 
-  const light = new THREE.DirectionalLight(0xffffff, 3)
-  light.position.set(10, 10, 10)
-  scene.add(light)
+//   const light = new THREE.DirectionalLight(0xffffff, 3)
+//   light.position.set(10, 10, 10)
+//   scene.add(light)
 
-  renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
-  renderer.setSize(container.clientWidth, container.clientHeight)
-  renderer.setPixelRatio(window.devicePixelRatio)
+//   renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
+//   renderer.setSize(container.clientWidth, container.clientHeight)
+//   renderer.setPixelRatio(window.devicePixelRatio)
 
-  container.appendChild(renderer.domElement)
+//   container.appendChild(renderer.domElement)
 
-  //This will load the 3d image
-  let loader = new THREE.GLTFLoader()
-  loader.load('./3d/scene.gltf', (gltf) => {
-    scene.add(gltf.scene)
-    skull = gltf.scene.children[0]
-    animate()
-  })
-}
+//This will load the 3d image
+//   let loader = new THREE.GLTFLoader()
+//   loader.load('./3d/scene.gltf', (gltf) => {
+//     scene.add(gltf.scene)
+//     skull = gltf.scene.children[0]
+//     animate()
+//   })
+// }
 
-const animate = () => {
-  requestAnimationFrame(animate)
-  skull.rotation.z += 0.005
-  renderer.render(scene, camera)
-}
+// const animate = () => {
+//   requestAnimationFrame(animate)
+//   skull.rotation.z += 0.005
+//   renderer.render(scene, camera)
+// }
 
-init()
+// init()
 
 //Exclusive section animations
 gsap.registerPlugin()
