@@ -58,11 +58,6 @@ ul li a {
   margin-right: 60px;
 }
 
-.icons i {
-  margin: 0 10px;
-  cursor: pointer;
-}
-
 /* Landing Page Styles */
 .landingPage {
   height: 90vh;
@@ -442,7 +437,7 @@ canvas {
 .copyHeading {
   margin-left: 60px;
   letter-spacing: 1.5px;
-  font-size: clamp(1rem, 3vw, 5rem);
+  font-size: clamp(1rem, 2vw, 2rem);
 }
 
 #footer {
@@ -457,12 +452,22 @@ canvas {
   letter-spacing: 1px;
 }
 
+.iIcons {
+  margin-right: 40px;
+  font-size: clamp(1rem, 2.5vw, 3rem);
+}
+
+.iIcons i {
+  margin: 0 10px;
+  cursor: pointer;
+}
+
 .midFooter {
   line-height: 1.5;
 }
 
 .midFooter h2 {
-  font-size: clamp(1rem, 3vw, 5rem);
+  font-size: clamp(1rem, 2vw, 2rem);
 }
 
 @media (max-width: 1180px) {
@@ -531,6 +536,11 @@ canvas {
     top: 3%;
     width: 50%;
   }
+  .copyHeading {
+    text-align: center;
+    margin: 0;
+    margin-top: 2px;
+  }
   /* .mainHeading2 {
     top: 10%;
     right: 0;
@@ -543,7 +553,7 @@ canvas {
     left: 15%;
   }
   #footer {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     left: 0;
     height: 125px;
@@ -555,7 +565,7 @@ canvas {
     text-align: center;
   }
   .lastPara,
-  .icons {
+  .iIcons {
     display: none;
   }
   .copyHeading {
