@@ -239,7 +239,8 @@ const animate = () => {
 init()
 
 //Exclusive section animations
-gsap.plugin.register()
+gsap.registerPlugin()
+gsap.registerPlugin(ScrollTrigger)
 
 const landingScramble = gsap.to('#heading2', {
   scrambleText: {
