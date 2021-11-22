@@ -244,7 +244,6 @@ gsap.registerPlugin(ScrollTrigger)
 
 const landingScramble = gsap.to('#heading2', {
   scrambleText: {
-    autoAlpha: 1,
     text: 'Dark Side Exclusives',
     teenLength: true,
     speed: 1,
@@ -257,9 +256,9 @@ const landingScramble = gsap.to('#heading2', {
   delay: 0.2,
 })
 
-// ScrollTrigger.create({
-//   animation: landingScramble,
-//   trigger: '#exTop',
-//   start: 'top top',
-//   end: 'bottom bottom',
-// })
+ScrollTrigger.create({
+  animation: landingScramble,
+  trigger: '#exTop',
+  start: 'top top',
+  end: 'bottom bottom',
+})
