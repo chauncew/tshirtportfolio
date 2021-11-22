@@ -246,14 +246,13 @@ const landingScramble = gsap.to('#heading2', {
   scrambleText: {
     text: 'Dark Side Exclusives',
     teenLength: true,
-    speed: 1,
+    speed: 8,
     revealDelay: 0,
     chars: 'upperCase',
     newClass: 'splitBackground',
   },
   duration: 1.8,
   ease: 'none',
-  delay: 0.2,
 })
 
 ScrollTrigger.create({
