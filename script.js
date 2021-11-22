@@ -272,5 +272,4 @@ ScrollTrigger.create({
   trigger: '#menAndWomen',
   start: 'top top',
   end: 'bottom bottom',
-  markers: 'true',
 })
