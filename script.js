@@ -16,8 +16,7 @@ let products = [
     price: 45.99,
     inCart: 0,
     inStock: 10,
-    image:
-      'https://ae01.alicdn.com/kf/H96c197e46e40444bbbe9d327820f79c9S/Skull-T-shirt-Men-Skeleton-T-shirt-Punk-Rock-Tshirt-Gun-T-shirts-3d-Print-T.jpg_q50.jpg',
+    image: './images/shirts1.jpg',
   },
   {
     id: 1,
@@ -25,8 +24,7 @@ let products = [
     price: 42.99,
     inCart: 0,
     inStock: 10,
-    image:
-      'https://ae01.alicdn.com/kf/HTB1NHYEcRyWBuNkSmFPq6xguVXay/New-T-shirt-Men-Summer-British-Style-Mens-Fashion-3D-Printed-skull-T-shirt-Casual-Short.jpg',
+    image: './images/shirts2.webp',
   },
   {
     id: 2,
@@ -34,8 +32,7 @@ let products = [
     price: 53.99,
     inCart: 0,
     inStock: 10,
-    image:
-      'https://images-na.ssl-images-amazon.com/images/I/71Xowsld8JL._AC_UX385_.jpg',
+    image: './images/shirts3.jpg',
   },
   {
     id: 3,
@@ -43,8 +40,7 @@ let products = [
     price: 50.99,
     inCart: 0,
     inStock: 10,
-    image:
-      'https://ae01.alicdn.com/kf/H60a9affe26e74941afe0ab9e89af28853/2020-hot-new-3D-t-shirt-design-skull-men-s-summer-short-sleeve-fashion-trend-simple.jpg',
+    image: './images/shirts4.webp',
   },
   {
     id: 4,
@@ -79,6 +75,15 @@ let products = [
     image: (src = 'images/redEyeSkulljpg.jpg'),
   },
 ]
+
+// Landing page animations
+// gsap.from('.mainHeading2', {
+//   autoAlpha: 0,
+//   y: -100,
+//   ease: 'bounce.out',
+//   duration: 1,
+//   stagger: 0.8,
+// })
 
 //This function will show the cart
 shoppingCart.addEventListener('click', () => {
@@ -208,7 +213,7 @@ const init = () => {
   const far = 1000
 
   camera = new THREE.PerspectiveCamera(fov, aspect, near, far)
-  camera.position.set(4.3, -0.5, 35)
+  camera.position.set(5, -0.5, 35)
 
   const ambient = new THREE.AmbientLight(0x404040, 1)
   scene.add(ambient)
@@ -239,3 +244,27 @@ const animate = () => {
 }
 
 init()
+
+//Exclusive section animations
+const landingScramble = gsap.to('#heading2', {
+  scrambleText: {
+    autoAlpha: 1,
+    text: 'Dark Side Exclusives',
+    teenLength: true,
+    speed: 1,
+    revealDelay: 0,
+    chars: 'upperCase',
+    newClass: 'splitBackground',
+  },
+  duration: 1.8,
+  ease: 'none',
+  delay: 0.2,
+})
+
+ScrollTrigger.create({
+  animation: landingScramble,
+  trigger: '#exTop',
+  start: 'top top',
+  end: 'bottom bottom',
+  // markers: true,
+})
